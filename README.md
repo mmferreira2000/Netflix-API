@@ -6,7 +6,7 @@
 
 * DataBase: PostgreSQL
 
-* Configuração:
+### Configuração:
 
 ```
 git clone git@github.com:mmferreira2000/Netflix-API.git
@@ -20,7 +20,7 @@ rails db:create db:migrate
 rspec
 ```
 
-## Endpoints
+### Endpoints
 
 * Para popular o Banco de dados:
 
