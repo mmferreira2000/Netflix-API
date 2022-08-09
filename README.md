@@ -11,7 +11,7 @@ cd Netflix-API
 
 bundle install
 
-rails db:create db:migrate
+rails db:drop db:create db:migrate
 
 rspec
 ```
