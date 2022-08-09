@@ -4,6 +4,19 @@ require 'csv'
 
 # comment to avoid RuboCop
 class ShowsController < ApplicationController
+  ShowReducer = Rack::Reducer.new(
+    Show.all,
+    ->(title:) { where('lower(title) like ?', "%#{title.downcase}%") },
+    ->(genre:) { where(genre: genre) },
+    ->(year:) { where(year: year) },
+    ->(country:) { where(country: country) }
+  )
+
+  def index
+    @shows = ShowReducer.apply(params)
+    render json: @shows.as_json(except: %i[created_at updated_at])
+  end
+
   def create
     CSV.foreach('db/netflix_titles.csv', headers: :first_row) do |row|
       @show = Show.create(title: row[2],
