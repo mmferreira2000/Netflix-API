@@ -7,9 +7,9 @@ class ShowsController < ApplicationController
   ShowReducer = Rack::Reducer.new(
     Show.all,
     ->(title:) { where('lower(title) like ?', "%#{title.downcase}%") },
-    ->(genre:) { where(genre: genre) },
-    ->(year:) { where(year: year) },
-    ->(country:) { where(country: country) }
+    ->(country:) { where('lower(country) like ?', "%#{country.downcase}%") },
+    ->(genre:) { where('lower(genre) like ?', "%#{genre.downcase}%") },
+    ->(year:) { where(year: year) }
   )
 
   def index

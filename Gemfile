@@ -48,3 +48,9 @@ end
 
 
 gem "rack-reducer", "~> 2.0"
+
+gem "rspec-rails", "~> 5.1"
+
+gem "faker", "~> 2.22"
+
+gem "factory_bot_rails", "~> 6.2"
