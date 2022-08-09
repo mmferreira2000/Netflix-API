@@ -26,7 +26,7 @@ Rode no terminal:
 ```
  rails s
 ```
-* Sinta-se à vontade para usar PostMan, Insomnia ou qualquer outro software de sua preferência! Basta remover o ```curl``` da URL utilizada. ;)
+* Sinta-se à vontade para usar PostMan, Insomnia ou qualquer outro software que desejar! Basta remover o ```curl``` da URL utilizada. ;)
 
 Para popular o Banco de dados:
 
