@@ -6,7 +6,7 @@
 
 * DataBase: PostgreSQL
 
-### Configuração:
+### Configuração
 
 ```
 git clone git@github.com:mmferreira2000/Netflix-API.git
