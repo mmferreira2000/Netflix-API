@@ -22,6 +22,13 @@ rspec
 
 ### Endpoints
 
+Rode no terminal:
+```
+ rails s
+```
+* Sinta-se à vontade para usar PostMan, Insomnia ou qualquer outro software de sua preferência.
+** Caso não queira usar basta adicionar ```curl``` antes da URL que desejar. ;)
+
 Para popular o Banco de dados:
 
 ```
