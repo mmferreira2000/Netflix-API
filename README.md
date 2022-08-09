@@ -9,7 +9,7 @@
 * Configuração:
 
 ```
-git clone ...
+git clone git@github.com:mmferreira2000/Netflix-API.git
 
 cd Netflix-API
 
