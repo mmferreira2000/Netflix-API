@@ -1,6 +1,4 @@
-# README
-
-Desafio API:
+# Desafio API
 
 * Ruby: 3.0.3
 
