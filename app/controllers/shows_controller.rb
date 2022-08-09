@@ -13,7 +13,8 @@ class ShowsController < ApplicationController
   )
 
   def index
-    render json: ShowReducer.apply(params).as_json(except: %i[created_at updated_at])
+    show = ShowReducer.apply(params)
+    render json: show.order('year ASC').as_json(except: %i[created_at updated_at])
   end
 
   def create
