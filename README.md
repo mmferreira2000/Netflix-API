@@ -27,7 +27,7 @@ Rode no terminal:
 Para popular o Banco de dados:
 
 ```
- curl http://localhost:3000/create
+ curl -X POST http://localhost:3000/create
 ```
 
 Para listar os Filmes/Séries:
