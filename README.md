@@ -1,4 +1,4 @@
-# Desafio API
+# Netflix API
 
 * Ruby: 3.0.3
 
