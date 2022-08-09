@@ -1,7 +1,6 @@
 # frozen_string_literal:true
 
 require 'csv'
-
 # comment to avoid RuboCop
 class ShowsController < ApplicationController
   ShowReducer = Rack::Reducer.new(
@@ -14,7 +13,7 @@ class ShowsController < ApplicationController
 
   def index
     show = ShowReducer.apply(params)
-    render json: show.order('year ASC').as_json(except: %i[created_at updated_at])
+    render json: show.order('year DESC').as_json(except: %i[created_at updated_at])
   end
 
   def create
@@ -26,6 +25,6 @@ class ShowsController < ApplicationController
                   published_at: row[6],
                   description: row[11])
     end
-    render json: Show.order('year ASC').as_json(except: %i[created_at updated_at])
+    render json: Show.order('year DESC').as_json(except: %i[created_at updated_at])
   end
 end
