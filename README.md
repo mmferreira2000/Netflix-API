@@ -1,10 +1,6 @@
 # Netflix API
 
-* Ruby: 3.0.3
-
-* Rails: 7.0.3
-
-* DataBase: PostgreSQL
+Ruby 3.0.3 | Rails 7.0.3 | PostgreSQL 14.4
 
 ### Configuração
 
