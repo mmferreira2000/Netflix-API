@@ -1,24 +1,21 @@
-# README
+# Netflix API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby: 3.0.3
 
-Things you may want to cover:
+* Rails: 7.0.3
 
-* Ruby version
+* DataBase: PostgreSQL
 
-* System dependencies
+* Configuração:
 
-* Configuration
+```
+git clone git@github.com:mmferreira2000/Netflix-API.git
 
-* Database creation
+cd Netflix-API
 
-* Database initialization
+bundle install
 
-* How to run the test suite
+rails db:create db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rspec
+```
