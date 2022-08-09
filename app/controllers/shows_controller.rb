@@ -13,20 +13,18 @@ class ShowsController < ApplicationController
   )
 
   def index
-    @shows = ShowReducer.apply(params)
-    render json: @shows.as_json(except: %i[created_at updated_at])
+    render json: ShowReducer.apply(params).as_json(except: %i[created_at updated_at])
   end
 
   def create
     CSV.foreach('db/netflix_titles.csv', headers: :first_row) do |row|
-      @show = Show.create(title: row[2],
-                          genre: row[1],
-                          year: row[7],
-                          country: row[5],
-                          published_at: row[6],
-                          description: row[11])
+      Show.create(title: row[2],
+                  genre: row[1],
+                  year: row[7],
+                  country: row[5],
+                  published_at: row[6],
+                  description: row[11])
     end
-    shows = Show.order('year ASC').as_json(except: %i[created_at updated_at])
-    render json: shows
+    render json: Show.order('year ASC').as_json(except: %i[created_at updated_at])
   end
 end
