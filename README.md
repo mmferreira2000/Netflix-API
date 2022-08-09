@@ -26,29 +26,28 @@ Rode no terminal:
 ```
  rails s
 ```
-* Sinta-se à vontade para usar PostMan, Insomnia ou qualquer outro software de sua preferência.
-** Caso não queira usar basta adicionar ```curl``` antes da URL que desejar. ;)
+* Sinta-se à vontade para usar PostMan, Insomnia ou qualquer outro software de sua preferência! Basta remover o ```curl``` da URL utilizada. ;)
 
 Para popular o Banco de dados:
 
 ```
- http://localhost:3000/create
+ curl http://localhost:3000/create
 ```
 
 Para listar os Filmes/Séries:
 
 ```
-http://localhost:3000/shows
+curl http://localhost:3000/shows
 ```
 
 Para fazer pesquisas basta adicionar '?' depois de shows e em seguida o atributo que deseja filtrar. Exemplo:
 
 ```
-http://localhost:3000/shows?year=2020
+curl http://localhost:3000/shows?year=2020
 ```
 
 Também é possível aplicar filtros simultâneos. Exemplo:
 
 ```
-http://localhost:3000/shows?year=2020&country=united%20states
+curl http://localhost:3000/shows?year=2020&country=united%20states
 ```
